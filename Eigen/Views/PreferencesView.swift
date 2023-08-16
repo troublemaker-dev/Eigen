@@ -76,21 +76,21 @@ struct PreferencesView: View {
                         Text("Recovery by passphrase: \(String(crypto.recoveryService.usePassphrase()))")
                         Text("# secrets in recovery: \(crypto.recoveryService.secretsStoredInRecovery().count)")
                         Text("# secrets locally: \(crypto.recoveryService.secretsStoredLocally().count)")
-                        Text("Curve25519 key: \(crypto.deviceCurve25519Key)")
-                        Text("Ed25519 key: \(crypto.deviceEd25519Key)")
-                        Text("Key backup enabled: \(String(crypto.backup.enabled))")
+//                        Text("Curve25519 key: \(crypto.deviceCurve25519Key)")
+//                        Text("Ed25519 key: \(crypto.deviceEd25519Key)")
+//                        Text("Key backup enabled: \(String(crypto.backup.enabled))")
                         Text("Can send messages to unverified sessions: \(String(!crypto.globalBlacklistUnverifiedDevices))")
                         Spacer()
                         Section("Import keys from export") {
                             TextEditor(text: $keysimport)
                                 .foregroundColor(.secondary)
                             SecureField("Password", text: $keyspass)
-                            Button("Import", action: {
-                                crypto.importRoomKeys(keysimport.data(using: .utf8), withPassword: keyspass) { _, _ in
-                                } failure: { err in
-                                    print(err!)
-                                }
-                            })
+//                            Button("Import", action: {
+//                                crypto.importRoomKeys(keysimport.data(using: .utf8), withPassword: keyspass) { _, _ in
+//                                } failure: { err in
+//                                    print(err!)
+//                                }
+//                            })
                         }
                     }
                 }

@@ -14,16 +14,17 @@ PODS:
   - AFNetworking/Serialization (4.0.1)
   - GZIP (1.3.0)
   - libbase58 (0.1.4)
-  - MatrixSDK (0.23.18):
-    - MatrixSDK/Core (= 0.23.18)
-  - MatrixSDK/Core (0.23.18):
+  - MatrixSDK (0.25.2):
+    - MatrixSDK/Core (= 0.25.2)
+  - MatrixSDK/Core (0.25.2):
     - AFNetworking (~> 4.0.0)
     - GZIP (~> 1.3.0)
     - libbase58 (~> 0.1.4)
-    - MatrixSDK/CryptoSDK
+    - MatrixSDKCrypto (= 0.2.0)
     - OLMKit (~> 3.2.5)
     - Realm (= 10.27.0)
     - SwiftyBeaver (= 1.9.5)
+  - MatrixSDKCrypto (0.2.0)
   - OLMKit (3.2.12):
     - OLMKit/olmc (= 3.2.12)
     - OLMKit/olmcpp (= 3.2.12)
@@ -35,7 +36,7 @@ PODS:
   - SwiftyBeaver (1.9.5)
 
 DEPENDENCIES:
-  - MatrixSDK (~> 0.23.18)
+  - MatrixSDK (~> 0.25.0)
 
 SPEC REPOS:
   trunk:
@@ -43,6 +44,7 @@ SPEC REPOS:
     - GZIP
     - libbase58
     - MatrixSDK
+    - MatrixSDKCrypto
     - OLMKit
     - Realm
     - SwiftyBeaver
@@ -51,11 +53,12 @@ SPEC CHECKSUMS:
   AFNetworking: 3bd23d814e976cd148d7d44c3ab78017b744cd58
   GZIP: 416858efbe66b41b206895ac6dfd5493200d95b3
   libbase58: 7c040313537b8c44b6e2d15586af8e21f7354efd
-  MatrixSDK: 26da2e3a9f3b02fc6ea67f5bc311d30f06f9ffba
+  MatrixSDK: 354274127d163af37bdc55093ab96deea1be6a40
+  MatrixSDKCrypto: e1ef22aae76b5a6f030ace21a47be83864f4ff44
   OLMKit: da115f16582e47626616874e20f7bb92222c7a51
   Realm: 9ca328bd7e700cc19703799785e37f77d1a130f2
   SwiftyBeaver: 84069991dd5dca07d7069100985badaca7f0ce82
 
-PODFILE CHECKSUM: 7f983da406c638848a4c8efed73dbc07e85ac64a
+PODFILE CHECKSUM: 0c443c5543fc480434d12d89c0d70a20df214c94
 
 COCOAPODS: 1.12.1

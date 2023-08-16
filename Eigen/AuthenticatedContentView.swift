@@ -20,27 +20,25 @@ struct AuthenticatedContentView: View {
             matrix.session.start { response in
                 guard response.isSuccess else { return }
 
-                MXCrypto.check(withMatrixSession: matrix.session) { crypto in
-                    if let crypto = crypto {
-                        startCrypto(crypto: crypto)
-                    } else {
-                        matrix.session.enableCrypto(true) { _ in
-                            startCrypto(crypto: matrix.session.crypto)
-                        }
-                    }
-                }
+                
+//                MXCrypto.initializeCrypto(withMatrixSession: matrix.session) { crypto in
+//                    if let crypto = crypto {
+//                        startCrypto(crypto: crypto as! MXCrypto)
+//                    } else {
+//                        matrix.session.enableCrypto(true) { _ in
+//                            startCrypto(crypto: matrix.session.crypto)
+//                        }
+//                    }
+//                }
             }
         }
     }
 
     func startCrypto(crypto: MXCrypto) {
         crypto.start {
-            crypto.warnOnUnknowDevices = false
             matrix.syncStatus = .complete
         } failure: { e in
-            if let e = e {
                 print(e)
-            }
         }
     }
 
